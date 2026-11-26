@@ -1,0 +1,110 @@
+:root {
+  --bg: #D6C6A5;
+  --fg: #1A2230;
+  --muted: #1E4A7D;
+  --accent: #1E4A7D;
+  --kothar-palace-stone: #D6C6A5;
+  --kothar-lapis-blue: #1E4A7D;
+  --kothar-storm-blue: #234F92;
+  --kothar-bronze: #A66A2C;
+  --kothar-night-slate: #1A2230;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1A2230;
+    --fg: #D6C6A5;
+    --muted: #9aa5b1;
+    --accent: #D6C6A5;
+  }
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  text-align: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.logo { width: 120px; height: 120px; }
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin: 24px 0 0;
+}
+.content {
+  text-align: left;
+  max-width: 600px;
+  min-width: 300px;
+  width: 100%;
+  margin-top: 24px;
+}
+.tagline {
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.description {
+  margin: 0 0 24px;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+.features li {
+  padding: 8px 0 8px 18px;
+  border-left: 3px solid var(--kothar-bronze);
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+code {
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  font-size: 0.88em;
+  letter-spacing: 0.02em;
+}
+.status { margin: 0 0 28px; }
+.status-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.badges a { line-height: 0; }
+.badges img { height: 20px; }
+.cta {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--muted);
+}
+.cta a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+.cta a:hover { opacity: 0.8; }
