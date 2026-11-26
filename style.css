@@ -101,16 +101,19 @@ code {
 
 .carousel-inner {
   display: flex;
-  width: 400%;
+  width: 600%;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.carousel-slide { width: 25%; flex-shrink: 0; }
+.carousel-slide { width: 16.6667%; flex-shrink: 0; }
 
 #repo-1:checked ~ .carousel-track .carousel-inner { transform: translateX(0); }
-#repo-2:checked ~ .carousel-track .carousel-inner { transform: translateX(-25%); }
-#repo-3:checked ~ .carousel-track .carousel-inner { transform: translateX(-50%); }
-#repo-4:checked ~ .carousel-track .carousel-inner { transform: translateX(-75%); }
+#repo-2:checked ~ .carousel-track .carousel-inner { transform: translateX(-16.6667%); }
+#repo-3:checked ~ .carousel-track .carousel-inner { transform: translateX(-33.3333%); }
+#repo-4:checked ~ .carousel-track .carousel-inner { transform: translateX(-33.3333%); }
+#repo-5:checked ~ .carousel-track .carousel-inner { transform: translateX(-50%); }
+#repo-6:checked ~ .carousel-track .carousel-inner { transform: translateX(-66.6667%); }
+#repo-7:checked ~ .carousel-track .carousel-inner { transform: translateX(-83.3333%); }
 
 .repo-card {
   border: 1px solid var(--kothar-bronze);
@@ -151,6 +154,14 @@ code {
 }
 .repo-link:hover { opacity: 0.75; }
 
+.repo-migrate {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--kothar-bronze);
+  opacity: 0.7;
+  margin: 10px 0 0;
+}
+
 .carousel-nav {
   display: flex;
   justify-content: center;
@@ -171,7 +182,7 @@ code {
 }
 
 .carousel-nav label:not(:last-child) {
-  border-right: 1px solid var(--fg);
+  border-right: 1px solid var(--muted);
 }
 
 .carousel-nav label:hover { opacity: 0.7; }
@@ -179,7 +190,10 @@ code {
 #repo-1:checked ~ .carousel-nav label:nth-child(1),
 #repo-2:checked ~ .carousel-nav label:nth-child(2),
 #repo-3:checked ~ .carousel-nav label:nth-child(3),
-#repo-4:checked ~ .carousel-nav label:nth-child(4) {
+#repo-4:checked ~ .carousel-nav label:nth-child(4),
+#repo-5:checked ~ .carousel-nav label:nth-child(5),
+#repo-6:checked ~ .carousel-nav label:nth-child(6),
+#repo-7:checked ~ .carousel-nav label:nth-child(7) {
   opacity: 1;
   color: var(--kothar-bronze);
   border-bottom-color: var(--kothar-bronze);

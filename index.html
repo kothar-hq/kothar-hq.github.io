@@ -32,14 +32,42 @@
         <input type="radio" name="repo-carousel" id="repo-2">
         <input type="radio" name="repo-carousel" id="repo-3">
         <input type="radio" name="repo-carousel" id="repo-4">
+        <input type="radio" name="repo-carousel" id="repo-5">
+        <input type="radio" name="repo-carousel" id="repo-6">
+        <input type="radio" name="repo-carousel" id="repo-7">
         <div class="carousel-track">
           <div class="carousel-inner">
+            <div class="carousel-slide">
+              <div class="repo-card">
+                <span class="repo-tag">Terraform</span>
+                <h3 class="repo-name">azure-tf-win-podman-setup</h3>
+                <p class="repo-desc">Parameterized Terraform for a Windows Azure VM with Podman pre-installed — For testing the <i>host-container-capabilities</i> skill.</p>
+                <a class="repo-link" href="https://github.com/kothar-hq/azure-tf-win-podman-setup">github.com/kothar-hq/azure-tf-win-podman-setup</a>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="repo-card">
+                <span class="repo-tag">Agent Skill</span>
+                <h3 class="repo-name">host-container-capabilities</h3>
+                <p class="repo-desc">A Claude Code agent skill that probes the host for container engines, detects Windows vs. Linux isolation modes, and routes work to the right engine — or falls back to CI when none is found locally.</p>
+                <a class="repo-link" href="https://github.com/kothar-hq/host-container-capabilities">github.com/kothar-hq/host-container-capabilities</a>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="repo-card">
+                <span class="repo-tag">Template</span>
+                <h3 class="repo-name">repo-template</h3>
+                <p class="repo-desc">The standard starting point for kothar-hq projects. Ships with Markdown linting, Claude Code agent configuration, and a shared skills library pre-wired.</p>
+                <a class="repo-link" href="https://github.com/kothar-hq/repo-template">github.com/kothar-hq/repo-template</a>
+              </div>
+            </div>
             <div class="carousel-slide">
               <div class="repo-card">
                 <span class="repo-tag">Base Images</span>
                 <h3 class="repo-name">windows-nano-baseimages</h3>
                 <p class="repo-desc">Practical, production-ready Windows Nano Server base images for 2019, 2022, and 2025. The source of the published <code>nanoserver-base</code> images on Docker Hub.</p>
                 <a class="repo-link" href="https://github.com/zippy1981/windows-nano-baseimages">github.com/zippy1981/windows-nano-baseimages</a>
+                <p class="repo-migrate">Migration to kothar-hq planned</p>
               </div>
             </div>
             <div class="carousel-slide">
@@ -48,6 +76,7 @@
                 <h3 class="repo-name">windows-nano-demos</h3>
                 <p class="repo-desc">Experimental containers for trying out new tools and ideas. A proving ground for base image additions, rapidly iterated with LLM assistance. If it works here, it ships upstream.</p>
                 <a class="repo-link" href="https://github.com/zippy1981/windows-nano-demos">github.com/zippy1981/windows-nano-demos</a>
+                <p class="repo-migrate">Migration to kothar-hq planned</p>
               </div>
             </div>
             <div class="carousel-slide">
@@ -56,27 +85,23 @@
                 <h3 class="repo-name">win-kube</h3>
                 <p class="repo-desc">AKS-shaped local Kubernetes with a Windows Server container node, minikube-style. Run real Windows containers in a local cluster without a cloud subscription.</p>
                 <a class="repo-link" href="https://github.com/zippy1981/win-kube">github.com/zippy1981/win-kube</a>
-              </div>
-            </div>
-            <div class="carousel-slide">
-              <div class="repo-card">
-                <span class="repo-tag">Helm</span>
-                <h3 class="repo-name">winhelmcream</h3>
-                <p class="repo-desc">Experiments with Helm charts focused on Windows workloads and container orchestration.</p>
-                <a class="repo-link" href="https://github.com/zippy1981/winhelmcream">github.com/zippy1981/winhelmcream</a>
+                <p class="repo-migrate">Migration to kothar-hq planned</p>
               </div>
             </div>
           </div>
         </div>
         <div class="carousel-nav">
-          <label for="repo-1">Base Images</label>
-          <label for="repo-2">Demos</label>
-          <label for="repo-3">Kubernetes</label>
-          <label for="repo-4">Helm</label>
+          <label for="repo-1">Terraform</label>
+          <label for="repo-2">Agent Skill</label>
+          <label for="repo-3">Template</label>
+          <label for="repo-4">Planning</label>
+          <label for="repo-5">Base Images</label>
+          <label for="repo-6">Demos</label>
+          <label for="repo-7">win-kube</label>
         </div>
       </div>
     </section>
-    <p class="cta">Coming soon &mdash; <a href="https://github.com/zippy1981/windows-nano-baseimages">follow progress on GitHub</a></p>
+    <p class="cta">Coming soon &mdash; <a href="https://github.com/kothar-hq">follow progress on GitHub</a></p>
   </div>
   <aside class="sidebar">
     <section class="status">
