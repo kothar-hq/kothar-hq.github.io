@@ -3,37 +3,54 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kothar — coming soon</title>
-<meta name="description" content="Kothar: Windows container work by Justin Dearing. Coming soon.">
-<style>
-  :root { --bg: #f6f3ee; --fg: #1d2530; --muted: #5d6875; --wall: #d9d2c5; --pane: #2f6fb7; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #12161c; --fg: #eef1f4; --muted: #9aa5b1; --wall: #2a313b; --pane: #5aa2e6; }
-  }
-  * { box-sizing: border-box; }
-  html, body { height: 100%; margin: 0; }
-  body {
-    background: var(--bg); color: var(--fg);
-    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-    display: grid; place-items: center; padding: 16px; text-align: center;
-  }
-  svg { width: 120px; height: 120px; }
-  h1 { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 600; letter-spacing: 0.04em; margin: 24px 0 8px; }
-  p { margin: 0; font-size: 1.25rem; color: var(--muted); }
-</style>
+<title>Kothar — Windows Nano Server base images</title>
+<meta name="description" content="Kothar: hardened Windows Nano Server base images for 2019, 2022, and 2025 — with updated bsdtar, jq, curl, and a text editor. PowerShell and non-PowerShell variants.">
+<link rel="icon" href="images/kothar-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-  <!-- A window set in a wall: four panes. -->
-  <svg viewBox="0 0 120 120" role="img" aria-label="A four-pane window set in a wall">
-    <rect width="120" height="120" rx="6" fill="var(--wall)"/>
-    <rect x="30" y="30" width="28" height="28" fill="var(--pane)"/>
-    <rect x="62" y="30" width="28" height="28" fill="var(--pane)"/>
-    <rect x="30" y="62" width="28" height="28" fill="var(--pane)"/>
-    <rect x="62" y="62" width="28" height="28" fill="var(--pane)"/>
-  </svg>
+  <img src="images/kothar-glyph.svg" alt="Kothar glyph" class="logo">
   <h1>Kothar</h1>
-  <p>Coming soon.</p>
+  <div class="content">
+    <p class="tagline">Hardened Windows Nano Server base images, done right.</p>
+    <p class="description">Windows Server 2019, 2022, and 2025 container images built with the tools your workloads actually need. PowerShell and non-PowerShell variants of each.</p>
+    <ul class="features">
+      <li>Updated <code>bsdtar</code> &amp; libarchive — ZIP and 7z support across all three versions</li>
+      <li><code>jq.exe</code> for REST response parsing without PowerShell</li>
+      <li><code>curl.exe</code> with HTTP/2 and HTTP/3 — features Microsoft doesn&rsquo;t ship</li>
+      <li><code>edit.exe</code> 2.0 — a familiar text editor when you need one in nano</li>
+    </ul>
+    <section class="status">
+      <h2 class="status-label">Docker Hub</h2>
+      <div class="badges">
+        <a href="https://hub.docker.com/r/zippy1981/nanoserver-base"><img src="https://img.shields.io/docker/pulls/zippy1981/nanoserver-base?label=pulls&logo=docker" alt="Docker Pulls"></a>
+        <a href="https://hub.docker.com/r/zippy1981/nanoserver-base/tags?name=ltsc2025"><img src="https://img.shields.io/docker/image-size/zippy1981/nanoserver-base/ltsc2025?label=ltsc2025" alt="ltsc2025 image size"></a>
+        <a href="https://hub.docker.com/r/zippy1981/nanoserver-base/tags?name=ltsc2025-pwsh"><img src="https://img.shields.io/docker/image-size/zippy1981/nanoserver-base/ltsc2025-pwsh?label=ltsc2025-pwsh" alt="ltsc2025-pwsh image size"></a>
+        <a href="https://hub.docker.com/r/zippy1981/nanoserver-base/tags?name=ltsc2022"><img src="https://img.shields.io/docker/image-size/zippy1981/nanoserver-base/ltsc2022?label=ltsc2022" alt="ltsc2022 image size"></a>
+        <a href="https://hub.docker.com/r/zippy1981/nanoserver-base/tags?name=ltsc2022-pwsh"><img src="https://img.shields.io/docker/image-size/zippy1981/nanoserver-base/ltsc2022-pwsh?label=ltsc2022-pwsh" alt="ltsc2022-pwsh image size"></a>
+        <a href="https://hub.docker.com/r/zippy1981/nanoserver-base/tags?name=ltsc2019"><img src="https://img.shields.io/docker/image-size/zippy1981/nanoserver-base/ltsc2019?label=ltsc2019" alt="ltsc2019 image size"></a>
+        <a href="https://hub.docker.com/r/zippy1981/nanoserver-base/tags?name=ltsc2019-pwsh"><img src="https://img.shields.io/docker/image-size/zippy1981/nanoserver-base/ltsc2019-pwsh?label=ltsc2019-pwsh" alt="ltsc2019-pwsh image size"></a>
+      </div>
+    </section>
+    <section class="status">
+      <h2 class="status-label">Build Status</h2>
+      <div class="badges">
+        <a href="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/nanoserver-base.yml"><img src="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/nanoserver-base.yml/badge.svg?branch=main" alt="nanoserver-base"></a>
+        <a href="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/mxe-image.yml"><img src="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/mxe-image.yml/badge.svg?branch=main" alt="MXE image"></a>
+        <a href="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/build-libarchive.yml"><img src="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/build-libarchive.yml/badge.svg?branch=main" alt="Build libarchive"></a>
+        <a href="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/lint-scripts.yml"><img src="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/lint-scripts.yml/badge.svg?branch=main" alt="Lint scripts"></a>
+        <a href="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/markdown-lint.yml"><img src="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/markdown-lint.yml/badge.svg?branch=main" alt="Lint Markdown"></a>
+        <a href="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/watch-tool-versions.yml"><img src="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/watch-tool-versions.yml/badge.svg?branch=main" alt="Watch tool versions"></a>
+        <a href="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/watch-upstream.yml"><img src="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/watch-upstream.yml/badge.svg?branch=main" alt="Watch upstream libarchive"></a>
+        <a href="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/dependabot/dependabot-updates"><img src="https://github.com/zippy1981/windows-nano-baseimages/actions/workflows/dependabot/dependabot-updates/badge.svg" alt="Dependabot Updates"></a>
+      </div>
+    </section>
+    <p class="cta">Coming soon &mdash; <a href="https://github.com/zippy1981/windows-nano-baseimages">follow progress on GitHub</a></p>
+  </div>
 </main>
 </body>
 </html>
