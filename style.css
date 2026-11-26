@@ -79,6 +79,93 @@ code {
   font-size: 0.88em;
   letter-spacing: 0.02em;
 }
+/* Repositories carousel */
+.repos { margin-bottom: 28px; }
+.carousel input[type="radio"] { display: none; }
+
+.carousel-track { overflow: hidden; }
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide { min-width: 100%; flex-shrink: 0; }
+
+#repo-1:checked ~ .carousel-track .carousel-inner { transform: translateX(0%); }
+#repo-2:checked ~ .carousel-track .carousel-inner { transform: translateX(-100%); }
+#repo-3:checked ~ .carousel-track .carousel-inner { transform: translateX(-200%); }
+#repo-4:checked ~ .carousel-track .carousel-inner { transform: translateX(-300%); }
+
+.repo-card {
+  border: 1px solid var(--kothar-bronze);
+  padding: 20px 20px 16px;
+}
+
+.repo-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--kothar-bronze);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.repo-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin: 0 0 10px;
+  word-break: break-word;
+}
+
+.repo-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
+
+.repo-link {
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  word-break: break-all;
+}
+.repo-link:hover { opacity: 0.8; }
+
+.carousel-dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.carousel-dots label {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--fg);
+  opacity: 0.25;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, opacity 0.2s;
+}
+
+.carousel-dots label:hover { opacity: 0.5; }
+
+#repo-1:checked ~ .carousel-dots label:nth-child(1),
+#repo-2:checked ~ .carousel-dots label:nth-child(2),
+#repo-3:checked ~ .carousel-dots label:nth-child(3),
+#repo-4:checked ~ .carousel-dots label:nth-child(4) {
+  background: var(--kothar-bronze);
+  opacity: 1;
+  transform: scale(1.25);
+}
+
 .status { margin: 0 0 28px; }
 .status-label {
   font-family: 'Cinzel', serif;

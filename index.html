@@ -24,6 +24,57 @@
       <li><code>curl.exe</code> with HTTP/2 and HTTP/3 — features Microsoft doesn&rsquo;t ship</li>
       <li><code>edit.exe</code> 2.0 — a familiar text editor when you need one in nano</li>
     </ul>
+    <section class="repos">
+      <h2 class="status-label">Repositories</h2>
+      <div class="carousel">
+        <input type="radio" name="repo-carousel" id="repo-1" checked>
+        <input type="radio" name="repo-carousel" id="repo-2">
+        <input type="radio" name="repo-carousel" id="repo-3">
+        <input type="radio" name="repo-carousel" id="repo-4">
+        <div class="carousel-track">
+          <div class="carousel-inner">
+            <div class="carousel-slide">
+              <div class="repo-card">
+                <span class="repo-tag">Base Images</span>
+                <h3 class="repo-name">windows-nano-baseimages</h3>
+                <p class="repo-desc">Practical, production-ready Windows Nano Server base images for 2019, 2022, and 2025. The source of the published <code>nanoserver-base</code> images on Docker Hub.</p>
+                <a class="repo-link" href="https://github.com/zippy1981/windows-nano-baseimages">github.com/zippy1981/windows-nano-baseimages</a>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="repo-card">
+                <span class="repo-tag">Demos</span>
+                <h3 class="repo-name">windows-nano-demos</h3>
+                <p class="repo-desc">Experimental containers for trying out new tools and ideas. A proving ground for base image additions, rapidly iterated with LLM assistance. If it works here, it ships upstream.</p>
+                <a class="repo-link" href="https://github.com/zippy1981/windows-nano-demos">github.com/zippy1981/windows-nano-demos</a>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="repo-card">
+                <span class="repo-tag">Kubernetes</span>
+                <h3 class="repo-name">win-kube</h3>
+                <p class="repo-desc">AKS-shaped local Kubernetes with a Windows Server container node, minikube-style. Run real Windows containers in a local cluster without a cloud subscription.</p>
+                <a class="repo-link" href="https://github.com/zippy1981/win-kube">github.com/zippy1981/win-kube</a>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="repo-card">
+                <span class="repo-tag">Helm</span>
+                <h3 class="repo-name">winhelmcream</h3>
+                <p class="repo-desc">Experiments with Helm charts focused on Windows workloads and container orchestration.</p>
+                <a class="repo-link" href="https://github.com/zippy1981/winhelmcream">github.com/zippy1981/winhelmcream</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots">
+          <label for="repo-1" aria-label="Base Images"></label>
+          <label for="repo-2" aria-label="Demos"></label>
+          <label for="repo-3" aria-label="Kubernetes"></label>
+          <label for="repo-4" aria-label="Helm"></label>
+        </div>
+      </div>
+    </section>
     <section class="status">
       <h2 class="status-label">Docker Hub</h2>
       <div class="badges">
